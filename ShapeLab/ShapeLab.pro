@@ -15,11 +15,25 @@ UI_DIR += ./GeneratedFiles
 INCLUDEPATH += $$PWD/../ThirdPartyDependence/eigen3
 INCLUDEPATH += $$PWD/../ThirdPartyDependence
 
-HEADERS  +=MainWindow.h
+HEADERS  += MainWindow.h \
+            AccEro3DNew.h \
+            fileIO.h \
+            model3D.h \
+            AccEro3D.h \
+            postProcess.h \
+            hmPara.h \
+            alphanum.hpp \
+            dirent.h 
 
 #ui_MainWindow not included.
-SOURCES += main.cpp\
-MainWindow.cpp
+SOURCES += main.cpp \
+           MainWindow.cpp \
+           fileIO.cpp \
+           model3D.cpp \
+           postProcess.cpp \
+           AccEro3DNew.cpp \
+           hmPara.cpp \
+           AccEro3D.cpp
 
 
 FORMS += ./MainWindow.ui

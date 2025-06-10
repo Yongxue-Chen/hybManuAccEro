@@ -12,32 +12,32 @@
 
 *.jar
 
-c++/DataSet/*.bin
-c++/DataSet/outputTime3D_save/
+DataSet/*.bin
+DataSet/outputTime3D_save/
 
 python/vtkFile/
 
 # for c++
-c++/QMeshLib/GeneratedFiles/
-c++/ShapeLab/GeneratedFiles/
-c++/DataSet/AccEroPro/
-c++/DataSet/3DGroupResult/
-c++/DataSet/3DPathResult/
-c++/DataSet/outputTime3D/
-c++/DataSet/trainingData/
-c++/DataSet/trainingDataDiff/
-c++/DataSet/trainingData3DLog/
-c++/DataSet/trainingData3D/
-c++/DataSet/trainingData3D_10by10/
-c++/.vs/ShapeLab/v17/ipch/
-c++/DataSet/outputTime/
-c++/DataSet/forGurobiQP/
+QMeshLib/GeneratedFiles/
+ShapeLab/GeneratedFiles/
+DataSet/AccEroPro/
+DataSet/3DGroupResult/
+DataSet/3DPathResult/
+DataSet/outputTime3D/
+DataSet/trainingData/
+DataSet/trainingDataDiff/
+DataSet/trainingData3DLog/
+DataSet/trainingData3D/
+DataSet/trainingData3D_10by10/
+.vs/ShapeLab/v17/ipch/
+DataSet/outputTime/
+DataSet/forGurobiQP/
 python/stlFile/
 python/voxelFile/
 *.qtvscr
 *.vcxproj
 *.vcxproj.filters
-c++/ShapeLab.sln
+ShapeLab.sln
 
 
 # User-specific files
@@ -71,7 +71,7 @@ bld/
 [Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
-c++/.vs/
+.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 

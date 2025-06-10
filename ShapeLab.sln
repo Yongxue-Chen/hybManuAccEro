@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QMeshLib", "C:/Users/j46868yc/Desktop/hybManuAccEro/QMeshLib\QMeshLib.vcxproj", "{EF000450-CD62-3191-9080-A7F6065FFDEE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLKLib", "C:/Users/j46868yc/Desktop/hybManuAccEro/GLKLib\GLKLib.vcxproj", "{2E5270A2-9E72-33FA-ACB3-28780FE4E0C4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShapeLab", "C:/Users/j46868yc/Desktop/hybManuAccEro/ShapeLab\ShapeLab.vcxproj", "{026F60F8-E4DB-3FB4-89AD-3C820B85F8E6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EF000450-CD62-3191-9080-A7F6065FFDEE} = {EF000450-CD62-3191-9080-A7F6065FFDEE}
+		{2E5270A2-9E72-33FA-ACB3-28780FE4E0C4} = {2E5270A2-9E72-33FA-ACB3-28780FE4E0C4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF000450-CD62-3191-9080-A7F6065FFDEE}.Debug|x64.ActiveCfg = Debug|x64
+		{EF000450-CD62-3191-9080-A7F6065FFDEE}.Debug|x64.Build.0 = Debug|x64
+		{EF000450-CD62-3191-9080-A7F6065FFDEE}.Release|x64.ActiveCfg = Release|x64
+		{EF000450-CD62-3191-9080-A7F6065FFDEE}.Release|x64.Build.0 = Release|x64
+		{2E5270A2-9E72-33FA-ACB3-28780FE4E0C4}.Debug|x64.ActiveCfg = Debug|x64
+		{2E5270A2-9E72-33FA-ACB3-28780FE4E0C4}.Debug|x64.Build.0 = Debug|x64
+		{2E5270A2-9E72-33FA-ACB3-28780FE4E0C4}.Release|x64.ActiveCfg = Release|x64
+		{2E5270A2-9E72-33FA-ACB3-28780FE4E0C4}.Release|x64.Build.0 = Release|x64
+		{026F60F8-E4DB-3FB4-89AD-3C820B85F8E6}.Debug|x64.ActiveCfg = Debug|x64
+		{026F60F8-E4DB-3FB4-89AD-3C820B85F8E6}.Debug|x64.Build.0 = Debug|x64
+		{026F60F8-E4DB-3FB4-89AD-3C820B85F8E6}.Release|x64.ActiveCfg = Release|x64
+		{026F60F8-E4DB-3FB4-89AD-3C820B85F8E6}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

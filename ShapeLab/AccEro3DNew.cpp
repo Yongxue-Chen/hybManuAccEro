@@ -2563,6 +2563,13 @@ void AccEro3DNew::preProcess(Eigen::VectorXi& resultModel, std::vector<int>& gro
 		overhangList.pop_back();
 		Eigen::Vector3i pos = this->modelObj3D->indexToCoordinate(idx);
 
+		if (pos(0) > this->modelObj3D->limitActionSpace(0) + this->lengthSM - 1
+			&& pos(0) < this->modelObj3D->limitActionSpace(1) - this->lengthSM + 1
+			&& pos(1) > this->modelObj3D->limitActionSpace(2) + this->lengthSM - 1
+			&& pos(1) < this->modelObj3D->limitActionSpace(3) - this->lengthSM + 1) {
+			continue;
+		}
+
 		std::vector<std::pair<std::pair<int, int>, int>> growTmpTmp;
 		std::vector<Eigen::Vector3i> growTmp;
 		growTmp.push_back(pos);

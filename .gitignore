@@ -23,7 +23,7 @@ ShapeLab/GeneratedFiles/
 DataSet/AccEroPro/
 DataSet/3DGroupResult/
 DataSet/3DPathResult/
-DataSet/outputTime3D/
+DataSet/outputTime3D/*.txt
 DataSet/trainingData/
 DataSet/trainingDataDiff/
 DataSet/trainingData3DLog/

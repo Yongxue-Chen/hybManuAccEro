@@ -111,6 +111,7 @@ public:
     QHBoxLayout *horizontalLayout_18;
     QCheckBox *checkBox_forShowing;
     QPushButton *pushButton_inputHMP3D;
+    QPushButton *pushButton_getField;
     QPushButton *pushButton_outputPath3D;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_5;
@@ -371,7 +372,6 @@ public:
         comboBox_modelChoice3D->addItem(QString());
         comboBox_modelChoice3D->addItem(QString());
         comboBox_modelChoice3D->addItem(QString());
-        comboBox_modelChoice3D->addItem(QString());
         comboBox_modelChoice3D->setObjectName(QString::fromUtf8("comboBox_modelChoice3D"));
         comboBox_modelChoice3D->setEditable(true);
 
@@ -383,6 +383,7 @@ public:
         horizontalLayout_10->addWidget(label_18);
 
         comboBox_hmpType = new QComboBox(tab_2);
+        comboBox_hmpType->addItem(QString());
         comboBox_hmpType->addItem(QString());
         comboBox_hmpType->addItem(QString());
         comboBox_hmpType->addItem(QString());
@@ -517,6 +518,11 @@ public:
         pushButton_inputHMP3D->setObjectName(QString::fromUtf8("pushButton_inputHMP3D"));
 
         horizontalLayout_18->addWidget(pushButton_inputHMP3D);
+
+        pushButton_getField = new QPushButton(page);
+        pushButton_getField->setObjectName(QString::fromUtf8("pushButton_getField"));
+
+        horizontalLayout_18->addWidget(pushButton_getField);
 
         pushButton_outputPath3D = new QPushButton(page);
         pushButton_outputPath3D->setObjectName(QString::fromUtf8("pushButton_outputPath3D"));
@@ -701,13 +707,13 @@ public:
         comboBox_modelChoice3D->setItemText(0, QCoreApplication::translate("MainWindow", "fertility100", nullptr));
         comboBox_modelChoice3D->setItemText(1, QCoreApplication::translate("MainWindow", "bracket100", nullptr));
         comboBox_modelChoice3D->setItemText(2, QCoreApplication::translate("MainWindow", "TPMS50", nullptr));
-        comboBox_modelChoice3D->setItemText(3, QCoreApplication::translate("MainWindow", "jennings", nullptr));
 
         label_18->setText(QCoreApplication::translate("MainWindow", "inputHMPType:", nullptr));
         comboBox_hmpType->setItemText(0, QCoreApplication::translate("MainWindow", "AccEro", nullptr));
-        comboBox_hmpType->setItemText(1, QCoreApplication::translate("MainWindow", "tmp", nullptr));
-        comboBox_hmpType->setItemText(2, QCoreApplication::translate("MainWindow", "mini", nullptr));
-        comboBox_hmpType->setItemText(3, QCoreApplication::translate("MainWindow", "conti", nullptr));
+        comboBox_hmpType->setItemText(1, QCoreApplication::translate("MainWindow", "tool10_local10_AccEro", nullptr));
+        comboBox_hmpType->setItemText(2, QCoreApplication::translate("MainWindow", "tmp", nullptr));
+        comboBox_hmpType->setItemText(3, QCoreApplication::translate("MainWindow", "mini", nullptr));
+        comboBox_hmpType->setItemText(4, QCoreApplication::translate("MainWindow", "conti", nullptr));
 
         label_19->setText(QCoreApplication::translate("MainWindow", "checkWindow", nullptr));
         checkBox_globalSearch->setText(QCoreApplication::translate("MainWindow", "globalSearch", nullptr));
@@ -721,6 +727,7 @@ public:
         pushButton_redunCheck->setText(QCoreApplication::translate("MainWindow", "redundancyCheck", nullptr));
         checkBox_forShowing->setText(QCoreApplication::translate("MainWindow", "For Showing", nullptr));
         pushButton_inputHMP3D->setText(QCoreApplication::translate("MainWindow", "input HMP", nullptr));
+        pushButton_getField->setText(QCoreApplication::translate("MainWindow", "getField", nullptr));
         pushButton_outputPath3D->setText(QCoreApplication::translate("MainWindow", "outputPath", nullptr));
         toolBox_2->setItemText(toolBox_2->indexOf(page), QCoreApplication::translate("MainWindow", "AccEro", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "3D Case", nullptr));

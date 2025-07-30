@@ -89,6 +89,7 @@ private slots:
     void getAccEroSolution3D();
     void inputHMP3D();
     void outputPath3D();
+    void getField();
     void checkRedundancy();
 	void preProcess();
     void accEroBatch();

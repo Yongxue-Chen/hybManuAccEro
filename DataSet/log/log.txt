@@ -1,0 +1,4 @@
+currentTime: 2025-07-30 11:42:37 modelName: fertility100_afterPre10 toolLength: 10 checkWindow: 10 solveTime: 100.633 preProcessTime: 44.8639 numOpt: 86892 preProcessNum: 615 solid number: 62152 size: 99 38 74 check Stability Time: 59.9919
+currentTime: 2025-07-30 11:48:02 modelName: TPMS50_afterPre10 toolLength: 10 checkWindow: 10 solveTime: 24.3393 preProcessTime: 0.615874 numOpt: 65986 preProcessNum: 1402 solid number: 47824 size: 50 50 50 check Stability Time: 21.3105
+currentTime: 2025-07-30 11:49:49 modelName: TPMS50_afterPre10 toolLength: 10 checkWindow: 10 solveTime: 23.7243 preProcessTime: 0 numOpt: 65986 preProcessNum: 1402 solid number: 47824 size: 50 50 50 check Stability Time: 20.7757
+currentTime: 2025-07-30 11:55:13 modelName: TPMS50_afterPre10 toolLength: 10 checkWindow: 10 solveTime: 24.518 preProcessTime: 0 numOpt: 65986 preProcessNum: 1402 solid number: 47824 size: 50 50 50 check Stability Time: 21.3675

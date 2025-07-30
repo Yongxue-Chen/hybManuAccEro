@@ -203,11 +203,6 @@
                <string>TPMS50</string>
               </property>
              </item>
-             <item>
-              <property name="text">
-               <string>jennings</string>
-              </property>
-             </item>
             </widget>
            </item>
            <item>
@@ -225,6 +220,11 @@
              <item>
               <property name="text">
                <string>AccEro</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>tool10_local10_AccEro</string>
               </property>
              </item>
              <item>
@@ -426,6 +426,13 @@
                 <widget class="QPushButton" name="pushButton_inputHMP3D">
                  <property name="text">
                   <string>input HMP</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_getField">
+                 <property name="text">
+                  <string>getField</string>
                  </property>
                 </widget>
                </item>

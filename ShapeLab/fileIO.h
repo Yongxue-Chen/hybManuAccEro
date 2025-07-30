@@ -83,6 +83,9 @@ public:
 
 	void writePathGroup(std::vector<Eigen::MatrixXd> path, int opeType, std::string filename); // write a path group to a txt file
 	void writeVoxelGroup(const std::vector<Eigen::Vector3i>& voxelGroup, int opeType, std::string filename); // write a voxel group to a txt file
+	
+	
+
 
 private:
 	Eigen::MatrixXd rot90(Eigen::MatrixXd matrix, int k); // rotate a matrix by 90 degrees k times counter-clockwise

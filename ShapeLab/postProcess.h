@@ -81,6 +81,8 @@ public:
 	bool justForShowing = false;
 
 	void tP2PathFile(const Eigen::MatrixXd& tP, double tEnd, const std::string& modelName);
+	void tP2Field(const Eigen::MatrixXd& tP, double tEnd, const std::string& modelName, const std::string& paraName);
+
 
 private:
 	model3D* modelObj;

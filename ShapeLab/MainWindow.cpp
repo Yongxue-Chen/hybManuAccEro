@@ -160,6 +160,7 @@ void MainWindow::createActions()
     connect(ui->pushButton_redunCheck, SIGNAL(released()), this, SLOT(checkRedundancy()));
 	connect(ui->pushButton_preProcess, SIGNAL(released()), this, SLOT(preProcess()));
 	connect(ui->pushButton_accEroBatch, SIGNAL(released()), this, SLOT(accEroBatch()));
+	connect(ui->pushButton_getField, SIGNAL(released()), this, SLOT(getField()));
 }
 
 void MainWindow::open()
@@ -774,7 +775,7 @@ void MainWindow::getAccEroSolution3D() {
 
 	this->inputHMP3D();
 
-    this->ui->comboBox_modelChoice3D->setCurrentText(QString::fromStdString(modelNameOriginal));
+    //this->ui->comboBox_modelChoice3D->setCurrentText(QString::fromStdString(modelNameOriginal));
 
     //std::cout << "1" << std::endl;
 
@@ -927,6 +928,9 @@ void MainWindow::inputHMP3D() {
     Eigen::MatrixXd HMP;
 	std::string hmpType = ui->comboBox_hmpType->currentText().toStdString();
 
+	//std::cout << "modelName: " << modelName << std::endl;
+	//std::cout << "hmpType: " << hmpType << std::endl;
+
     IO_operator->readHMP3D("../DataSet/outputTime3D/" + modelName + "_" + hmpType + "HMP.txt", HMP, tEnd);
 
 	HMP = HMP.array() + 1;
@@ -974,6 +978,18 @@ void MainWindow::inputHMP3D() {
 	delete IO_operator;
 
 	std::cout << "get 3D HMP!\n";
+}
+
+
+void MainWindow::getField() {
+	Eigen::Vector2d zeroInCenterFrame = Eigen::Vector2d::Zero();
+    commandParas cmParas;
+
+    postProcess* postPro_operator = new postProcess(modelObj3D, cmParas, zeroInCenterFrame);
+    postPro_operator->tP2Field(modelObj3D->HMP, modelObj3D->tEnd, ui->comboBox_modelChoice3D->currentText().toStdString(), ui->comboBox_hmpType->currentText().toStdString());
+
+    delete postPro_operator;
+    std::cout << "output field!" << std::endl;
 }
 
 void MainWindow::outputPath3D() {

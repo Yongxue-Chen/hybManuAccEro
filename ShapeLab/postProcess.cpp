@@ -26,6 +26,44 @@ void postProcess::tP2PathFile(const Eigen::MatrixXd& tP, double tEnd, const std:
 	pathGroup2CommandFile(pathGroupSet, modelName, false);
 }
 
+void postProcess::tP2Field(const Eigen::MatrixXd& tP, double tEnd, const std::string& modelName, const std::string& paraName) {
+	Eigen::MatrixXi sequence = tP2Sequnce(tP, tEnd);
+	std::vector<opeGroup> groupSet = sequence2Group(sequence);
+	groupSet = adjustGroupSet(groupSet);
+
+	Eigen::MatrixXi fieldValue = Eigen::MatrixXi::Ones(this->modelObj->nx * this->modelObj->ny * this->modelObj->nz, 2);
+	fieldValue = fieldValue * (int(tEnd) + 1);
+	for (int i= 0; i < groupSet.size(); i++) {
+		opeGroup voxelGroup = groupSet[i];
+		int opeType = voxelGroup.opeType;
+		for (int j = 0; j < voxelGroup.voxelPos.size(); j++) {
+			Eigen::Vector3i pos = voxelGroup.voxelPos[j];
+			int idx = this->modelObj->coordinateToIndex(pos);
+			if (opeType == 100000) {
+				fieldValue(idx, 0) = i;
+			}
+			else {
+				fieldValue(idx, 1) = i;
+			}
+		}
+	}
+
+	Eigen::MatrixXi field = Eigen::MatrixXi::Zero(fieldValue.rows(), 5);
+
+	for (int i = 0; i < fieldValue.rows(); i++) {
+		Eigen::Vector3i pos = this->modelObj->indexToCoordinate(i);
+		field(i, 0) = pos(0);
+		field(i, 1) = pos(1);
+		field(i, 2) = pos(2);
+		field(i, 3) = fieldValue(i, 0);
+		field(i, 4) = fieldValue(i, 1);
+	}
+
+	fileIO* IO_operator = new fileIO();
+	IO_operator->writeMatrix(field, "../DataSet/outputTime3D/" + modelName + "_" + paraName + "_field.txt");
+	delete IO_operator;
+}
+
 Eigen::MatrixXi postProcess::tP2Sequnce(const Eigen::MatrixXd& tP, double tEnd) {
 	std::vector<matrixElement> elements;
 	elements.reserve(tP.size());

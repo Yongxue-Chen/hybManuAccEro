@@ -13,32 +13,15 @@
 *.jar
 
 DataSet/*.bin
-DataSet/outputTime3D_save/
-
-python/vtkFile/
 
 # for c++
 QMeshLib/GeneratedFiles/
 ShapeLab/GeneratedFiles/
-DataSet/AccEroPro/
-DataSet/3DGroupResult/
-DataSet/3DPathResult/
-DataSet/outputTime3D/*.txt
-DataSet/trainingData/
-DataSet/trainingDataDiff/
-DataSet/trainingData3DLog/
-DataSet/trainingData3D/
-DataSet/trainingData3D_10by10/
 .vs/ShapeLab/v17/ipch/
-DataSet/outputTime/
-DataSet/forGurobiQP/
-python/stlFile/
-python/voxelFile/
 *.qtvscr
 *.vcxproj
 *.vcxproj.filters
 ShapeLab.sln
-
 
 # User-specific files
 *.rsuser

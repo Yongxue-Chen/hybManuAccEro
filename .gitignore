@@ -13,6 +13,7 @@
 *.jar
 
 DataSet/*.bin
+DataSet/outputTime3D/*.txt
 
 # for c++
 QMeshLib/GeneratedFiles/

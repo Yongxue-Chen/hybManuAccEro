@@ -8,5 +8,4 @@ Windows + Visual Studio + QT-plugin (tested version: VS2022 + QT5.14.2 + msvc201
 7. enable openmp
 8. open console
 9. change to c++ 17
-10. new folder outputTime3D and log.txt
-11. Linker->system: set stack reverve size (8388608)
+10. Linker->system: set stack reverve size (8388608)

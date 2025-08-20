@@ -1,7 +1,6 @@
 # Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive–Subtractive Manufacturing
 
 Yongxue Chen, Tao Liu, Yuming Huang, Weiming Wang, Tianyu Zhang, Kun Qian, Zikang Shi, "[Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive–Subtractive Manufacturing]()", ACM Transactions on Graphics, 2025.
-
 [[Arxiv Paper]()] [[Video]()]
 
 ## Overview
@@ -85,7 +84,7 @@ hybManuAccEro implements inverse-operation-based planning for hybrid additive–
 
 ## Contact
 - Yongxue Chen: yongxue.chen@postgrad.manchester.ac.uk  
-- Charlie C.L. Wang: changling.wang@manchester.ac.uk
+- Charlie C.L. Wang: charlie.wang@manchester.ac.uk
 
 ## Notes
 - Platform: Windows + Visual Studio + Qt (tested: VS2022 + Qt 5.14.2 + `msvc2017_64`).

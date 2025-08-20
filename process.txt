@@ -1,4 +1,0 @@
-1. c++17
-#2. 安装libtorch，并配置
-https://www.cnblogs.com/riverstar/p/17829646.html
-/INCLUDE:?warp_size@cuda@at@@YAHXZ /INCLUDE:?_torch_cuda_cu_linker_symbol_op_cuda@native@at@@YA?AVTensor@2@AEBV32@@Z

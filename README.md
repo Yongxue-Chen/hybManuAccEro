@@ -51,6 +51,7 @@ hybManuAccEro implements inverse-operation-based planning for hybrid additive–
 6. The generated schedule will be saved to `DataSet/outputTime3D/` with filename:  
    `<modelName>_afterPre<toolLength>_tool<toolLength>_local<checkWindow>_AccEroHMP.txt`.
 7. Users can also use button `accEroBatch` to batch generate results. Simply place all target voxel model files in `DataSet/inputVoxModel/` and configure parameters for each model in the `DataSet/outputTime3D/testList.txt` file.
+8. Whether using the `accEro` button or `accEroBatch` button, the processing time required for each model and various result information will be saved in `DataSet/log/log.txt`.
 
 ### Voxel Model File Format
 - File type: `<modelName>.txt`

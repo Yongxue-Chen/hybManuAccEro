@@ -93,4 +93,4 @@ This paper presents a method for computing interleaved additive and subtractive 
 - Build settings: C++17, OpenMP enabled, console subsystem enabled, increased stack reserve size.
 
 ## Citation
-If you use ShapeLab in academic work, please cite the corresponding paper.
+If you use our code in academic work, please cite the corresponding paper.

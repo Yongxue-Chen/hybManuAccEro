@@ -28,7 +28,6 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QToolBox>
 #include <QtWidgets/QTreeView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -88,9 +87,6 @@ public:
     QComboBox *comboBox_modelChoice3D;
     QLabel *label_18;
     QComboBox *comboBox_hmpType;
-    QToolBox *toolBox_2;
-    QWidget *page;
-    QVBoxLayout *verticalLayout_7;
     QHBoxLayout *horizontalLayout_20;
     QLabel *label_19;
     QSpinBox *spinBox_checkWindow;
@@ -99,20 +95,23 @@ public:
     QSpinBox *spinBox_toolLength;
     QHBoxLayout *horizontalLayout_22;
     QCheckBox *checkBox_preProcess;
+    QCheckBox *checkBox_optAE3D;
     QPushButton *pushButton_accEro3D;
     QPushButton *pushButton_accEroBatch;
-    QPushButton *pushButton_input3DMatrix;
-    QCheckBox *checkBox_optAE3D;
-    QPushButton *pushButton_preProcess;
-    QHBoxLayout *horizontalLayout_21;
-    QSpinBox *spinBox_reduncheckWIndow;
-    QPushButton *pushButton_redunCheck;
     QSpacerItem *verticalSpacer_7;
     QHBoxLayout *horizontalLayout_18;
     QCheckBox *checkBox_forShowing;
     QPushButton *pushButton_inputHMP3D;
     QPushButton *pushButton_getField;
     QPushButton *pushButton_outputPath3D;
+    QWidget *tab;
+    QVBoxLayout *verticalLayout;
+    QPushButton *pushButton_input3DMatrix;
+    QPushButton *pushButton_preProcess;
+    QHBoxLayout *horizontalLayout_21;
+    QSpinBox *spinBox_reduncheckWIndow;
+    QPushButton *pushButton_redunCheck;
+    QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_5;
     QComboBox *comboBox_numOfCores;
@@ -322,7 +321,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(dockWidget->sizePolicy().hasHeightForWidth());
         dockWidget->setSizePolicy(sizePolicy);
-        dockWidget->setMinimumSize(QSize(800, 659));
+        dockWidget->setMinimumSize(QSize(800, 778));
         dockWidgetContents = new QWidget();
         dockWidgetContents->setObjectName(QString::fromUtf8("dockWidgetContents"));
         dockWidgetContents->setLayoutDirection(Qt::LeftToRight);
@@ -396,24 +395,15 @@ public:
 
         verticalLayout_3->addLayout(horizontalLayout_10);
 
-        toolBox_2 = new QToolBox(tab_2);
-        toolBox_2->setObjectName(QString::fromUtf8("toolBox_2"));
-        page = new QWidget();
-        page->setObjectName(QString::fromUtf8("page"));
-        page->setGeometry(QRect(0, 0, 758, 518));
-        verticalLayout_7 = new QVBoxLayout(page);
-        verticalLayout_7->setSpacing(6);
-        verticalLayout_7->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
         horizontalLayout_20 = new QHBoxLayout();
         horizontalLayout_20->setSpacing(6);
         horizontalLayout_20->setObjectName(QString::fromUtf8("horizontalLayout_20"));
-        label_19 = new QLabel(page);
+        label_19 = new QLabel(tab_2);
         label_19->setObjectName(QString::fromUtf8("label_19"));
 
         horizontalLayout_20->addWidget(label_19);
 
-        spinBox_checkWindow = new QSpinBox(page);
+        spinBox_checkWindow = new QSpinBox(tab_2);
         spinBox_checkWindow->setObjectName(QString::fromUtf8("spinBox_checkWindow"));
         spinBox_checkWindow->setMinimum(1);
         spinBox_checkWindow->setMaximum(999);
@@ -421,17 +411,17 @@ public:
 
         horizontalLayout_20->addWidget(spinBox_checkWindow);
 
-        checkBox_globalSearch = new QCheckBox(page);
+        checkBox_globalSearch = new QCheckBox(tab_2);
         checkBox_globalSearch->setObjectName(QString::fromUtf8("checkBox_globalSearch"));
 
         horizontalLayout_20->addWidget(checkBox_globalSearch);
 
-        label_21 = new QLabel(page);
+        label_21 = new QLabel(tab_2);
         label_21->setObjectName(QString::fromUtf8("label_21"));
 
         horizontalLayout_20->addWidget(label_21);
 
-        spinBox_toolLength = new QSpinBox(page);
+        spinBox_toolLength = new QSpinBox(tab_2);
         spinBox_toolLength->setObjectName(QString::fromUtf8("spinBox_toolLength"));
         spinBox_toolLength->setMinimum(2);
         spinBox_toolLength->setMaximum(200);
@@ -441,50 +431,88 @@ public:
         horizontalLayout_20->addWidget(spinBox_toolLength);
 
 
-        verticalLayout_7->addLayout(horizontalLayout_20);
+        verticalLayout_3->addLayout(horizontalLayout_20);
 
         horizontalLayout_22 = new QHBoxLayout();
         horizontalLayout_22->setSpacing(6);
         horizontalLayout_22->setObjectName(QString::fromUtf8("horizontalLayout_22"));
-        checkBox_preProcess = new QCheckBox(page);
+        checkBox_preProcess = new QCheckBox(tab_2);
         checkBox_preProcess->setObjectName(QString::fromUtf8("checkBox_preProcess"));
         checkBox_preProcess->setChecked(true);
 
         horizontalLayout_22->addWidget(checkBox_preProcess);
 
-        pushButton_accEro3D = new QPushButton(page);
+        checkBox_optAE3D = new QCheckBox(tab_2);
+        checkBox_optAE3D->setObjectName(QString::fromUtf8("checkBox_optAE3D"));
+        checkBox_optAE3D->setChecked(false);
+
+        horizontalLayout_22->addWidget(checkBox_optAE3D);
+
+        pushButton_accEro3D = new QPushButton(tab_2);
         pushButton_accEro3D->setObjectName(QString::fromUtf8("pushButton_accEro3D"));
 
         horizontalLayout_22->addWidget(pushButton_accEro3D);
 
-        pushButton_accEroBatch = new QPushButton(page);
+        pushButton_accEroBatch = new QPushButton(tab_2);
         pushButton_accEroBatch->setObjectName(QString::fromUtf8("pushButton_accEroBatch"));
 
         horizontalLayout_22->addWidget(pushButton_accEroBatch);
 
 
-        verticalLayout_7->addLayout(horizontalLayout_22);
+        verticalLayout_3->addLayout(horizontalLayout_22);
 
-        pushButton_input3DMatrix = new QPushButton(page);
+        verticalSpacer_7 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer_7);
+
+        horizontalLayout_18 = new QHBoxLayout();
+        horizontalLayout_18->setSpacing(6);
+        horizontalLayout_18->setObjectName(QString::fromUtf8("horizontalLayout_18"));
+        checkBox_forShowing = new QCheckBox(tab_2);
+        checkBox_forShowing->setObjectName(QString::fromUtf8("checkBox_forShowing"));
+        checkBox_forShowing->setChecked(true);
+
+        horizontalLayout_18->addWidget(checkBox_forShowing);
+
+        pushButton_inputHMP3D = new QPushButton(tab_2);
+        pushButton_inputHMP3D->setObjectName(QString::fromUtf8("pushButton_inputHMP3D"));
+
+        horizontalLayout_18->addWidget(pushButton_inputHMP3D);
+
+        pushButton_getField = new QPushButton(tab_2);
+        pushButton_getField->setObjectName(QString::fromUtf8("pushButton_getField"));
+
+        horizontalLayout_18->addWidget(pushButton_getField);
+
+        pushButton_outputPath3D = new QPushButton(tab_2);
+        pushButton_outputPath3D->setObjectName(QString::fromUtf8("pushButton_outputPath3D"));
+
+        horizontalLayout_18->addWidget(pushButton_outputPath3D);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_18);
+
+        tabWidget->addTab(tab_2, QString());
+        tab = new QWidget();
+        tab->setObjectName(QString::fromUtf8("tab"));
+        verticalLayout = new QVBoxLayout(tab);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        pushButton_input3DMatrix = new QPushButton(tab);
         pushButton_input3DMatrix->setObjectName(QString::fromUtf8("pushButton_input3DMatrix"));
 
-        verticalLayout_7->addWidget(pushButton_input3DMatrix);
+        verticalLayout->addWidget(pushButton_input3DMatrix);
 
-        checkBox_optAE3D = new QCheckBox(page);
-        checkBox_optAE3D->setObjectName(QString::fromUtf8("checkBox_optAE3D"));
-        checkBox_optAE3D->setChecked(false);
-
-        verticalLayout_7->addWidget(checkBox_optAE3D);
-
-        pushButton_preProcess = new QPushButton(page);
+        pushButton_preProcess = new QPushButton(tab);
         pushButton_preProcess->setObjectName(QString::fromUtf8("pushButton_preProcess"));
 
-        verticalLayout_7->addWidget(pushButton_preProcess);
+        verticalLayout->addWidget(pushButton_preProcess);
 
         horizontalLayout_21 = new QHBoxLayout();
         horizontalLayout_21->setSpacing(6);
         horizontalLayout_21->setObjectName(QString::fromUtf8("horizontalLayout_21"));
-        spinBox_reduncheckWIndow = new QSpinBox(page);
+        spinBox_reduncheckWIndow = new QSpinBox(tab);
         spinBox_reduncheckWIndow->setObjectName(QString::fromUtf8("spinBox_reduncheckWIndow"));
         spinBox_reduncheckWIndow->setMinimum(1);
         spinBox_reduncheckWIndow->setMaximum(99999999);
@@ -493,62 +521,27 @@ public:
 
         horizontalLayout_21->addWidget(spinBox_reduncheckWIndow);
 
-        pushButton_redunCheck = new QPushButton(page);
+        pushButton_redunCheck = new QPushButton(tab);
         pushButton_redunCheck->setObjectName(QString::fromUtf8("pushButton_redunCheck"));
 
         horizontalLayout_21->addWidget(pushButton_redunCheck);
 
 
-        verticalLayout_7->addLayout(horizontalLayout_21);
+        verticalLayout->addLayout(horizontalLayout_21);
 
-        verticalSpacer_7 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_7->addItem(verticalSpacer_7);
-
-        horizontalLayout_18 = new QHBoxLayout();
-        horizontalLayout_18->setSpacing(6);
-        horizontalLayout_18->setObjectName(QString::fromUtf8("horizontalLayout_18"));
-        checkBox_forShowing = new QCheckBox(page);
-        checkBox_forShowing->setObjectName(QString::fromUtf8("checkBox_forShowing"));
-        checkBox_forShowing->setChecked(true);
-
-        horizontalLayout_18->addWidget(checkBox_forShowing);
-
-        pushButton_inputHMP3D = new QPushButton(page);
-        pushButton_inputHMP3D->setObjectName(QString::fromUtf8("pushButton_inputHMP3D"));
-
-        horizontalLayout_18->addWidget(pushButton_inputHMP3D);
-
-        pushButton_getField = new QPushButton(page);
-        pushButton_getField->setObjectName(QString::fromUtf8("pushButton_getField"));
-
-        horizontalLayout_18->addWidget(pushButton_getField);
-
-        pushButton_outputPath3D = new QPushButton(page);
-        pushButton_outputPath3D->setObjectName(QString::fromUtf8("pushButton_outputPath3D"));
-
-        horizontalLayout_18->addWidget(pushButton_outputPath3D);
-
-
-        verticalLayout_7->addLayout(horizontalLayout_18);
-
-        toolBox_2->addItem(page, QString::fromUtf8("AccEro"));
-
-        verticalLayout_3->addWidget(toolBox_2);
-
-        tabWidget->addTab(tab_2, QString());
-
-        verticalLayout_2->addWidget(tabWidget);
+        verticalLayout->addItem(verticalSpacer);
 
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setSpacing(6);
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
-        label_5 = new QLabel(dockWidgetContents);
+        label_5 = new QLabel(tab);
         label_5->setObjectName(QString::fromUtf8("label_5"));
 
         horizontalLayout_8->addWidget(label_5);
 
-        comboBox_numOfCores = new QComboBox(dockWidgetContents);
+        comboBox_numOfCores = new QComboBox(tab);
         comboBox_numOfCores->addItem(QString());
         comboBox_numOfCores->addItem(QString());
         comboBox_numOfCores->addItem(QString());
@@ -558,7 +551,11 @@ public:
         horizontalLayout_8->addWidget(comboBox_numOfCores);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_8);
+        verticalLayout->addLayout(horizontalLayout_8);
+
+        tabWidget->addTab(tab, QString());
+
+        verticalLayout_2->addWidget(tabWidget);
 
         treeView = new QTreeView(dockWidgetContents);
         treeView->setObjectName(QString::fromUtf8("treeView"));
@@ -660,7 +657,6 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(0);
-        toolBox_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -719,23 +715,23 @@ public:
         checkBox_globalSearch->setText(QCoreApplication::translate("MainWindow", "globalSearch", nullptr));
         label_21->setText(QCoreApplication::translate("MainWindow", "toolLength", nullptr));
         checkBox_preProcess->setText(QCoreApplication::translate("MainWindow", "preProcess", nullptr));
+        checkBox_optAE3D->setText(QCoreApplication::translate("MainWindow", "optInAccEro", nullptr));
         pushButton_accEro3D->setText(QCoreApplication::translate("MainWindow", "accEro", nullptr));
         pushButton_accEroBatch->setText(QCoreApplication::translate("MainWindow", "accEroBatch", nullptr));
-        pushButton_input3DMatrix->setText(QCoreApplication::translate("MainWindow", "input", nullptr));
-        checkBox_optAE3D->setText(QCoreApplication::translate("MainWindow", "optInAccEro", nullptr));
-        pushButton_preProcess->setText(QCoreApplication::translate("MainWindow", "preProces", nullptr));
-        pushButton_redunCheck->setText(QCoreApplication::translate("MainWindow", "redundancyCheck", nullptr));
         checkBox_forShowing->setText(QCoreApplication::translate("MainWindow", "For Showing", nullptr));
         pushButton_inputHMP3D->setText(QCoreApplication::translate("MainWindow", "input HMP", nullptr));
         pushButton_getField->setText(QCoreApplication::translate("MainWindow", "getField", nullptr));
         pushButton_outputPath3D->setText(QCoreApplication::translate("MainWindow", "outputPath", nullptr));
-        toolBox_2->setItemText(toolBox_2->indexOf(page), QCoreApplication::translate("MainWindow", "AccEro", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "3D Case", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Main Page", nullptr));
+        pushButton_input3DMatrix->setText(QCoreApplication::translate("MainWindow", "input", nullptr));
+        pushButton_preProcess->setText(QCoreApplication::translate("MainWindow", "preProces", nullptr));
+        pushButton_redunCheck->setText(QCoreApplication::translate("MainWindow", "redundancyCheck", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "numOfCores", nullptr));
         comboBox_numOfCores->setItemText(0, QCoreApplication::translate("MainWindow", "15", nullptr));
         comboBox_numOfCores->setItemText(1, QCoreApplication::translate("MainWindow", "20", nullptr));
         comboBox_numOfCores->setItemText(2, QCoreApplication::translate("MainWindow", "30", nullptr));
 
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Other Tools", nullptr));
         pushButton_clearAll->setText(QCoreApplication::translate("MainWindow", "Clear All", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));

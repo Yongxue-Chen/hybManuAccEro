@@ -127,7 +127,7 @@
    <property name="minimumSize">
     <size>
      <width>800</width>
-     <height>659</height>
+     <height>778</height>
     </size>
    </property>
    <attribute name="dockWidgetArea">
@@ -171,7 +171,7 @@
        </property>
        <widget class="QWidget" name="tab_2">
         <attribute name="title">
-         <string>3D Case</string>
+         <string>Main Page</string>
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
@@ -247,244 +247,242 @@
           </layout>
          </item>
          <item>
-          <widget class="QToolBox" name="toolBox_2">
-           <property name="currentIndex">
-            <number>0</number>
+          <layout class="QHBoxLayout" name="horizontalLayout_20">
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>checkWindow</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_checkWindow">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>999</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_globalSearch">
+             <property name="text">
+              <string>globalSearch</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>toolLength</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_toolLength">
+             <property name="minimum">
+              <number>2</number>
+             </property>
+             <property name="maximum">
+              <number>200</number>
+             </property>
+             <property name="singleStep">
+              <number>1</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_22">
+           <item>
+            <widget class="QCheckBox" name="checkBox_preProcess">
+             <property name="text">
+              <string>preProcess</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_optAE3D">
+             <property name="text">
+              <string>optInAccEro</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_accEro3D">
+             <property name="text">
+              <string>accEro</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_accEroBatch">
+             <property name="text">
+              <string>accEroBatch</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
            </property>
-           <widget class="QWidget" name="page">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>0</y>
-              <width>758</width>
-              <height>518</height>
-             </rect>
-            </property>
-            <attribute name="label">
-             <string>AccEro</string>
-            </attribute>
-            <layout class="QVBoxLayout" name="verticalLayout_7">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_20">
-               <item>
-                <widget class="QLabel" name="label_19">
-                 <property name="text">
-                  <string>checkWindow</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSpinBox" name="spinBox_checkWindow">
-                 <property name="minimum">
-                  <number>1</number>
-                 </property>
-                 <property name="maximum">
-                  <number>999</number>
-                 </property>
-                 <property name="value">
-                  <number>10</number>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="checkBox_globalSearch">
-                 <property name="text">
-                  <string>globalSearch</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_21">
-                 <property name="text">
-                  <string>toolLength</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSpinBox" name="spinBox_toolLength">
-                 <property name="minimum">
-                  <number>2</number>
-                 </property>
-                 <property name="maximum">
-                  <number>200</number>
-                 </property>
-                 <property name="singleStep">
-                  <number>1</number>
-                 </property>
-                 <property name="value">
-                  <number>10</number>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_22">
-               <item>
-                <widget class="QCheckBox" name="checkBox_preProcess">
-                 <property name="text">
-                  <string>preProcess</string>
-                 </property>
-                 <property name="checked">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_accEro3D">
-                 <property name="text">
-                  <string>accEro</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_accEroBatch">
-                 <property name="text">
-                  <string>accEroBatch</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_input3DMatrix">
-               <property name="text">
-                <string>input</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="checkBox_optAE3D">
-               <property name="text">
-                <string>optInAccEro</string>
-               </property>
-               <property name="checked">
-                <bool>false</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_preProcess">
-               <property name="text">
-                <string>preProces</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_21">
-               <item>
-                <widget class="QSpinBox" name="spinBox_reduncheckWIndow">
-                 <property name="minimum">
-                  <number>1</number>
-                 </property>
-                 <property name="maximum">
-                  <number>99999999</number>
-                 </property>
-                 <property name="singleStep">
-                  <number>1</number>
-                 </property>
-                 <property name="value">
-                  <number>10000</number>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_redunCheck">
-                 <property name="text">
-                  <string>redundancyCheck</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <spacer name="verticalSpacer_7">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_18">
-               <item>
-                <widget class="QCheckBox" name="checkBox_forShowing">
-                 <property name="text">
-                  <string>For Showing</string>
-                 </property>
-                 <property name="checked">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_inputHMP3D">
-                 <property name="text">
-                  <string>input HMP</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_getField">
-                 <property name="text">
-                  <string>getField</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_outputPath3D">
-                 <property name="text">
-                  <string>outputPath</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </widget>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <widget class="QCheckBox" name="checkBox_forShowing">
+             <property name="text">
+              <string>For Showing</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_inputHMP3D">
+             <property name="text">
+              <string>input HMP</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_getField">
+             <property name="text">
+              <string>getField</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_outputPath3D">
+             <property name="text">
+              <string>outputPath</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Other Tools</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="pushButton_input3DMatrix">
+           <property name="text">
+            <string>input</string>
+           </property>
           </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_preProcess">
+           <property name="text">
+            <string>preProces</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_21">
+           <item>
+            <widget class="QSpinBox" name="spinBox_reduncheckWIndow">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>99999999</number>
+             </property>
+             <property name="singleStep">
+              <number>1</number>
+             </property>
+             <property name="value">
+              <number>10000</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_redunCheck">
+             <property name="text">
+              <string>redundancyCheck</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>numOfCores</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_numOfCores">
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>15</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>20</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>30</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </widget>
       </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_8">
-       <item>
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>numOfCores</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_numOfCores">
-         <property name="editable">
-          <bool>true</bool>
-         </property>
-         <item>
-          <property name="text">
-           <string>15</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>20</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>30</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
      </item>
      <item>
       <widget class="QTreeView" name="treeView">

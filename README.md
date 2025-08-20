@@ -11,7 +11,7 @@ hybManuAccEro implements inverse-operation-based planning for hybrid additive–
 ### Option A: Prebuilt Binary (Release)
 1. Download the `.zip` from Releases.
 2. Extract the archive.
-3. Double-click `ShapeLab.exe` in the `shapelab` folder to start.
+3. Double-click `ShapeLab.exe` in the `hybManuAccEro` folder to start.
 
 ### Option B: Build from Source
 - Open the QMake project `ShapeLab.pro` with the Qt Visual Studio Tools extension in Visual Studio.

@@ -855,7 +855,7 @@ void fileIO::endCommandFile(std::string filePath, int lastPos) {
 
 	file << "G1 Z200 F1000\n";
 	file << "G1 B-42.245 F1000\n";
-	file << "M6000\n\n";
+	//file << "M6000\n\n";
 
 	file << "M30 (End of program)\n";
 

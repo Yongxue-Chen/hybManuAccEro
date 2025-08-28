@@ -995,7 +995,7 @@ void MainWindow::getField() {
 void MainWindow::outputPath3D() {
     //Eigen::Vector2d zeroInCenterFrame(-4.5 * 1.6, -12 * 1.6);
     Eigen::Vector2d zeroInCenterFrame;
-    zeroInCenterFrame << -1 * modelObj3D->nx / 2 * 1.2 - 0.5, -1 * modelObj3D->ny / 2 * 1.2;
+    zeroInCenterFrame << -1 * modelObj3D->nx / 2 * 1.2 - 1.2, -1 * modelObj3D->ny / 2 * 1.2;
 	std::cout << "nx: " << modelObj3D->nx << " ny: " << modelObj3D->ny << std::endl;
     commandParas cmParas;
 

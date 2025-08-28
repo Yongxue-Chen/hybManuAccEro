@@ -28,10 +28,13 @@ struct commandParas {
 	double SMFeedRate = 900;
 	double fastFeedRate = 20000;
 	double fastFeedRateLow = 20000;
+	
+	double DxA = 1.525+0.425, DyA = -2.125-0.025;
+	double DxS = 1.025+0.525, DyS = -0.625-0.275;
 
-	Eigen::Vector3d amCenterPosition = Eigen::Vector3d(194.9, 224.61, 91.160);
-	Eigen::Vector3d smCenterPositionVertical = Eigen::Vector3d(112.831, 302.976, -38.246);
-	Eigen::Vector3d smCenterPositionHorizontal = Eigen::Vector3d(112.83, 232.806, -109.05);
+	Eigen::Vector3d amCenterPosition = Eigen::Vector3d(194.9 - DxA, 224.61 - DyA, 91.160);
+	Eigen::Vector3d smCenterPositionVertical = Eigen::Vector3d(112.831 - DxA, 302.976 - DyA, -38.246);
+	Eigen::Vector3d smCenterPositionHorizontal = Eigen::Vector3d(112.83 - DxS, 235.327 - DyS, -109.05);
 
 	double zeroC = 21.286;
 	double AM_B = 47.755;

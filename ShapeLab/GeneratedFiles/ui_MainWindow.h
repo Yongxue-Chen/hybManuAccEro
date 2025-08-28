@@ -127,7 +127,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1343, 1097);
+        MainWindow->resize(1343, 1109);
         MainWindow->setMinimumSize(QSize(0, 0));
         QFont font;
         font.setBold(true);
@@ -382,9 +382,6 @@ public:
         horizontalLayout_10->addWidget(label_18);
 
         comboBox_hmpType = new QComboBox(tab_2);
-        comboBox_hmpType->addItem(QString());
-        comboBox_hmpType->addItem(QString());
-        comboBox_hmpType->addItem(QString());
         comboBox_hmpType->addItem(QString());
         comboBox_hmpType->addItem(QString());
         comboBox_hmpType->setObjectName(QString::fromUtf8("comboBox_hmpType"));
@@ -707,9 +704,6 @@ public:
         label_18->setText(QCoreApplication::translate("MainWindow", "inputHMPType:", nullptr));
         comboBox_hmpType->setItemText(0, QCoreApplication::translate("MainWindow", "AccEro", nullptr));
         comboBox_hmpType->setItemText(1, QCoreApplication::translate("MainWindow", "tool10_local10_AccEro", nullptr));
-        comboBox_hmpType->setItemText(2, QCoreApplication::translate("MainWindow", "tmp", nullptr));
-        comboBox_hmpType->setItemText(3, QCoreApplication::translate("MainWindow", "mini", nullptr));
-        comboBox_hmpType->setItemText(4, QCoreApplication::translate("MainWindow", "conti", nullptr));
 
         label_19->setText(QCoreApplication::translate("MainWindow", "checkWindow", nullptr));
         checkBox_globalSearch->setText(QCoreApplication::translate("MainWindow", "globalSearch", nullptr));

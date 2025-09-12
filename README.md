@@ -1,7 +1,7 @@
 # Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive–Subtractive Manufacturing
 ![Teaser](./assets/teaser.jpg)
 
-Yongxue Chen, Tao Liu, Yuming Huang, Weiming Wang, Tianyu Zhang, Kun Qian, Zikang Shi, Charlie C.L. Wang "[Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive–Subtractive Manufacturing]()", ACM Transactions on Graphics, 2025.
+Yongxue Chen, Tao Liu, Yuming Huang, Weiming Wang, Tianyu Zhang, Kun Qian, Zikang Shi, and Charlie C.L. Wang, "[Can Any Model Be Fabricated? Inverse Operation Based Planning for Hybrid Additive–Subtractive Manufacturing]()", ACM Transactions on Graphics (SIGGRAPH Asia 2025), vol.44, no.6, December 2025.
 [[Arxiv Paper]()] [[Video](https://youtu.be/QE_5t5a_qDg)]
 
 ## Abstract
